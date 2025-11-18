@@ -1,22 +1,16 @@
-# Windows IoT — Circuit Schematic
+# Windows Iot Bundle Learn How Windows Can Be Used In Iot — Circuit Notes
 
-- Course: Windows IoT Bundle: Learn how Windows can be used in IoT
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/windows-iot-10-raspberry-pi-raspberrypi-iot-bundle-bootcamp/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the Embedded Systems board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- Relay `IN -> GPIO`, `VCC -> 5V`, `GND -> GND` (use transistor driver if required).
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
- GPIO -> [Driver] -> Relay IN -> Load
- 5V  -> Relay VCC
- GND -> Relay GND
-```
-
-## Purchase With Discount
-
-Get a discounted price and implement Windows IoT hardware control — use the link above.
-
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.
